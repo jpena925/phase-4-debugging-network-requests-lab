@@ -62,12 +62,14 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: Tried to submit a new toy, checked the network tab and saw a 500 error
+  so went to the server log and saw a name error. Changed Toys.all to Toy.all
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: Unexpected end of JSON input, which means whatever is being returned
+  from the fetch cannot be jsonified. added render JSON in controller
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: Server said routing error, no route matches delete, added a destroy route
